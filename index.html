@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Tic Tac Toe</title>
+     <link rel="icon" href="./icons/favicon.png" type="image/png">
+     <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+     <div class="logo">
+          <a href="./"><img src="./icons/logo.png" alt="tic_tac-toe_site_logo"></a>
+     </div>
+     
+     <div class="display"></div>
+
+     <div class="screen-A hide">
+          <div class="cards">
+               <div class="card" onClick="selectGameMode(`screen-B`,0)">
+                    <img src="./icons/brain.png" alt="image_against_ai">
+                    <div class="card-label">
+                         Against AI
+                    </div>
+               </div>
+               <div class="card" onClick="selectGameMode(`screen-C`,1)">
+                    <img src="./icons/player.png" alt="image_against_friend">
+                    <div class="card-label">With a friend</div>
+               </div>
+          </div>
+          <div class="label">Choose your play mode</div>
+     </div>
+
+     <div class="screen-B hide">
+          <div class="screen">
+               <div class="label">Pick your battle sign</div>
+               <div class="signs">
+                    <div class="cross" onclick="setSinglePlayerSign(0)">x</div>
+                    <div class="circle" onclick="setSinglePlayerSign(1)">o</div>
+               </div>
+               <input type="text" placeholder="Player name" name="singlePlayerName" id="singlePlayerName">
+               <button onclick="startSinglePlayer()">Battle <img src="./icons/controller.png" alt=""></button>
+          </div>
+          <div class="error">Pick your battle sign and name</div>
+     </div>
+
+     <div class="screen-C hide">
+          <div class="cards">
+               <div class="card">
+                    <div class="sign">
+                         <div class="cross">x</div>
+                    </div>
+                    <input type="text" placeholder="Player A" name="player_A_name" id="player_A_name">
+               </div>
+               <div class="go">
+                    <img src="./icons/controller.png" alt=""><span onclick="startMultiPlayer()">battle</span>
+               </div>
+               <div class="card">
+                    <div class="sign">
+                         <div class="cross">o</div>
+                    </div>
+                    <input type="text" placeholder="Player B" name="player_B_name" id="player_B_name">
+               </div>
+          </div>  
+          <div class="err error">Pick players battle sign and name</div>
+     </div>
+
+     <div class="screen-D hide">
+          <div class="controller">
+               <div class="left"></div>
+               <div class="body">
+                    <div class="player-left">
+                         <div class="player-name">
+                              Alex
+                         </div>
+                         <div class="player-score">03</div>
+                    </div>
+                   <div class="board">
+                    <div class="links">
+                         <span onclick="playAgain()">Play Again</span> | <span onclick="resetGame()">Reset Game</span> 
+                    </div>
+                         <div class="grids">
+                              <div class="cell">o</div>
+                              <div class="cell"></div>
+                              <div class="cell"></div>
+                              <div class="cell"></div>
+                              <div class="cell">x</div>
+                              <div class="cell"></div>
+                              <div class="cell"></div>
+                              <div class="cell"></div>
+                              <div class="cell">o</div>
+                         </div>
+                         <div class="info turn ">
+                              <span>Turn</span> <div>x</div>
+                         </div>
+                         <div class="info tie ">
+                              <span>Tie</span>
+                         </div>
+                         <div class="info winner ">
+                              <span>Winner</span> <div>x</div>
+                         </div>
+                   </div>
+                    <div class="player-right">
+                         <div class="player-name">
+                              Adam
+                         </div>
+                         <div class="player-score">03</div>
+                    </div>
+               </div>
+               <div class="right"></div>
+          </div>
+     </div>
+
+     
+
+</body>
+<script src="./js/script.js"></script>
+</html>
