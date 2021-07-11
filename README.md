@@ -1,1 +1,2 @@
-<a href="https://leosarad.github.io/tic-tac-toe/">Play Game</a>
+## <sub>Tic Tac Toe </sub>
+The classic tic tac toe. Just check it out. <a href="">View Deployment</a>
